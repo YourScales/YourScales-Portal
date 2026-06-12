@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YourScales - Client Portal</title>
-    <link rel="icon" type="image/png" href="https://yourscales.com/logo.png">
+    <link class="favicon" rel="icon" type="image/png" href="https://yourscales.com/logo.png">
     <style>
         * {
             margin: 0;
@@ -104,19 +104,19 @@
         }
 
         .nav-links a {
-            color: #a3a3a3;
+            color: #737373;
             text-decoration: none;
             font-size: 13px;
             transition: color 0.2s ease;
+            cursor: pointer;
         }
 
         .nav-links a:hover {
-            color: #ffffff;
+            color: #a3a3a3;
         }
 
-        /* The Updated Return Button styling */
         .btn-return {
-            margin-top: 24px;
+            margin-top: 32px;
             display: inline-block;
             padding: 10px 20px;
             background-color: #171717;
@@ -158,12 +158,18 @@
         </form>
 
         <div class="nav-links">
-            <a href="#">Forgot security passkey?</a>
-            <a href="#">Request terminal authorization</a>
+            <a onclick="handleSecurityNotice()">Forgot security passkey?</a>
+            <a onclick="handleSecurityNotice()">Request terminal authorization</a>
         </div>
 
         <a href="https://yourscales.com" class="btn-return">← Return to Main Terminal</a>
     </div>
+
+    <script>
+        function handleSecurityNotice() {
+            alert("Security Protocol: Please contact your dedicated YourScales account administrator directly to reset credentials or request new terminal authorization configurations.");
+        }
+    </script>
 
 </body>
 </html>
